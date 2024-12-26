@@ -105,7 +105,13 @@ to {
     transform: translateY(20px);
     font-size: 30px;
     position: absolute;
-    top: 42%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, 0);
-  }
+}
+
+.volume {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

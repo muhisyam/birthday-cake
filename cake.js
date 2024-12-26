@@ -12,6 +12,7 @@ navigator.mediaDevices
         microphone.connect(analyser);
 
         const flame = document.querySelectorAll('.flame');
+        const textVol = document.querySelector('.volume');
         let isVolumeAbove20 = false;
 
         function animateFlame() {
@@ -21,8 +22,9 @@ navigator.mediaDevices
 
             analyser.getByteFrequencyData(dataArray);
             const volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
+            textVol.innerHTML = Math.floor(volume)
 
-            if (volume >= 20) {
+            if (volume >= 10) {
                 isVolumeAbove20 = true;
                 flame.forEach(e => e.remove());
                 setInterval(createHeart, 30);

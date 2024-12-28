@@ -24,7 +24,7 @@ navigator.mediaDevices
             const volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
             textVol.innerHTML = Math.floor(volume)
 
-            if (volume >= 10) {
+            if (volume >= 6) {
                 isVolumeAbove20 = true;
                 flame.forEach(e => e.remove());
                 setInterval(createHeart, 30);
